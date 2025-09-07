@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>বাংলাদেশ টিভি চ্যানেল</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+
+  <h1>📺 বাংলাদেশের লাইভ টিভি চ্যানেল</h1>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="🔍 চ্যানেল খুঁজুন..." oninput="filterChannels()" />
+  </div>
+
+  <div class="channels-container" id="channelContainer">
+    <!-- চ্যানেল কার্ডগুলো জাভাস্ক্রিপ্ট দিয়ে লোড হবে -->
+  </div>
+
+  <div id="player">
+    <video id="tvPlayer" controls muted playsinline></video>
+    <div id="statusMessage" class="status-message">একটি চ্যানেল সিলেক্ট করুন</div>
+    <div id="errorMessage" class="error-message"></div>
+    <div id="loadingSpinner" class="loading-spinner" style="display: none;"></div>
+    <div class="player-controls">
+      <button id="pipButton" class="pip-btn" disabled>পিকচার ইন পিকচার</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
